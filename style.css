@@ -167,3 +167,99 @@ a { color: inherit; text-decoration: none; }
   overflow-y: auto;
 }
 .nav-gallery-grid img { width: 100%; height: 60px; object-fit: cover; border-radius: 4px; }
+/* ===== PROFESSIONAL REDESIGN ===== */
+:root {
+  --navy: #0B1F3A;
+  --crimson: #D7263D;
+  --gold: #F2A93B;
+  --offwhite: #F7F8FA;
+  --charcoal: #1A1A1A;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--charcoal);
+  background: #fff;
+}
+
+h1, h2, h3, .brand span {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.site-header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+.brand span { color: var(--navy); }
+.brand strong { color: var(--crimson); }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--navy), #1a3a63); }
+.hero .eyebrow { color: var(--gold); letter-spacing: 2px; }
+.hero h1 { font-weight: 800; }
+.btn-primary { background: var(--crimson); border: none; }
+.btn-primary:hover { background: #b81d31; transform: translateY(-2px); transition: 0.2s; }
+.btn-outline { border: 2px solid var(--gold); color: #fff; }
+.btn-outline:hover { background: var(--gold); color: var(--navy); transition: 0.2s; }
+
+/* Section spacing */
+.vision, .featured, .intro, .development, .programs, .values, .join, .contact {
+  padding: 80px 20px;
+}
+
+/* Vision */
+.vision { background: var(--offwhite); }
+.vision h2 { color: var(--navy); font-size: 2rem; }
+
+/* Featured photo tiles */
+.featured-item { box-shadow: 0 8px 24px rgba(0,0,0,0.15); transition: transform 0.3s; }
+.featured-item:hover { transform: scale(1.02); }
+.featured-overlay span { font-family: 'Poppins', sans-serif; letter-spacing: 1px; }
+
+/* Section labels */
+.section-label { color: var(--crimson); font-weight: 700; letter-spacing: 2px; font-size: 0.85rem; }
+
+/* Development cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+.card-number { color: var(--gold); font-weight: 800; font-size: 1.5rem; }
+
+/* Program cards */
+.program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.program {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 14px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.program:hover { transform: translateY(-6px); }
+.program-icon { font-size: 2.2rem; margin-bottom: 10px; }
+.program span { color: var(--gold); font-weight: 700; letter-spacing: 1px; font-size: 0.85rem; }
+.program h3 { margin: 8px 0; }
+.program p { font-size: 0.9rem; opacity: 0.85; }
+
+/* Values */
+.values { background: var(--offwhite); }
+.values-list p { border-left: 3px solid var(--crimson); padding-left: 14px; margin-bottom: 14px; }
+
+/* Join section */
+.join { background: var(--navy); color: #fff; }
+.join h2 { color: #fff; }
+.join .btn-primary { background: var(--gold); color: var(--navy); font-weight: 700; }
+.join .btn-dark { border: 2px solid #fff; color: #fff; background: transparent; }
+
+/* Contact */
+.contact-item { border-radius: 12px; padding: 16px; background: var(--offwhite); transition: 0.2s; }
+.contact-item:hover { background: #eef0f3; }
+.contact-icon { color: var(--crimson); }
+
+/* Footer */
+.footer { background: var(--navy); color: #fff; padding: 40px 20px; }
