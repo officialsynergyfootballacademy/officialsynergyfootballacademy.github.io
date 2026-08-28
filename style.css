@@ -247,9 +247,45 @@ h1, h2, h3, .brand span {
 .program p { font-size: 0.9rem; opacity: 0.85; }
 
 /* Values */
-.values { background: var(--offwhite); }
-.values-list p { border-left: 3px solid var(--crimson); padding-left: 14px; margin-bottom: 14px; }
-
+.values {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+}
+.values::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11,31,58,0.92), rgba(11,31,58,0.75));
+}
+.values .container { position: relative; z-index: 1; }
+.values .section-label { color: var(--gold); }
+.values h2 {
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.values-list p {
+  color: #f0f0f0;
+  border-left: 3px solid var(--gold);
+  padding: 6px 0 6px 18px;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.values-list p strong {
+  color: #fff;
+  font-size: 1.15rem;
+  display: block;
+  margin-bottom: 4px;
+}
 /* Join section */
 .join { background: var(--navy); color: #fff; }
 .join h2 { color: #fff; }
