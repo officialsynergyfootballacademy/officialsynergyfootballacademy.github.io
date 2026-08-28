@@ -16,3 +16,12 @@ document.querySelectorAll(".nav a").forEach(link => {
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+const galleryToggle = document.getElementById('gallery-toggle');
+const galleryPanel = document.getElementById('nav-gallery-panel');
+
+if (galleryToggle && galleryPanel) {
+  galleryToggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    galleryPanel.classList.toggle('open');
+  });
+}
