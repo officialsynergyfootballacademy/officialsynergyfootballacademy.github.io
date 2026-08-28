@@ -299,3 +299,7 @@ h1, h2, h3, .brand span {
 
 /* Footer */
 .footer { background: var(--navy); color: #fff; padding: 40px 20px; }
+.logo-img {
+  height: 70px;
+  width: auto;
+}
