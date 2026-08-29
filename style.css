@@ -529,3 +529,7 @@ a.featured-item { display: block; text-decoration: none; }
 }
 .warm-hero .hero-badge { color: #ffb347; }
 .warm-hero h1 span { color: #ff9d4d; }
+.hero-photos.single-photo img {
+  flex: none;
+  width: 100%;
+}
