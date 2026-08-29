@@ -496,3 +496,4 @@ h1, h2, h3, .brand span {
 @media (min-width: 768px) {
   .subpage-hero h1 { font-size: 3.2rem; }
 }
+a.featured-item { display: block; text-decoration: none; }
