@@ -738,3 +738,38 @@ a.featured-item { display: block; text-decoration: none; }
 @media (min-width: 1100px) {
   .memory-slide { flex: 0 0 30%; }
 }
+/* Overall page background wash */
+body {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f6fb 50%, #ffffff 100%);
+}
+
+/* Light sections get a subtle tint instead of flat white */
+.vision, .intro, .development, .programs {
+  background: linear-gradient(160deg, #ffffff 0%, #eef1f8 100%);
+}
+
+/* Dark sections unified with a matching deep gradient instead of flat black */
+.memories {
+  background: linear-gradient(160deg, #0a0a0a 0%, #0d1420 60%, #0a0a0a 100%);
+}
+
+.gallery-page {
+  background: linear-gradient(160deg, #ffffff 0%, #eef1f8 100%);
+}
+
+/* Footer matches the smoky hero tone instead of flat black */
+.footer {
+  background: linear-gradient(160deg, #0a0a0a 0%, #0d1420 100%);
+}
+
+/* Subtle divider glow between sections for smoother transitions */
+.vision, .development, .programs, .intro {
+  position: relative;
+}
+.vision::before, .development::before, .programs::before, .intro::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(11,42,107,0.15), transparent);
+}
