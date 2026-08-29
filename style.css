@@ -773,3 +773,24 @@ body {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(11,42,107,0.15), transparent);
 }
+/* Visible soft blue-gray theme across the whole page */
+body {
+  background: linear-gradient(180deg, #e9edf5 0%, #dce3f0 40%, #e9edf5 100%);
+}
+
+.vision, .intro, .development, .programs, .gallery-page {
+  background: transparent;
+}
+
+/* Make cards/tiles stand out clearly against the tinted background */
+.card, .program {
+  box-shadow: 0 6px 20px rgba(11,42,107,0.12);
+}
+.card {
+  background: #fff;
+}
+
+/* Dark sections stay unified with a deep navy-black gradient */
+.memories, .footer {
+  background: linear-gradient(160deg, #0a0a0a 0%, #0d1420 60%, #0a0a0a 100%);
+}
