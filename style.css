@@ -497,3 +497,35 @@ h1, h2, h3, .brand span {
   .subpage-hero h1 { font-size: 3.2rem; }
 }
 a.featured-item { display: block; text-decoration: none; }
+.subpage-hero { position: relative; overflow: hidden; }
+
+.hero-photos {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 0;
+}
+.hero-photos img {
+  flex: 1;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+.subpage-hero .container { position: relative; z-index: 2; }
+
+.subpage-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(10,10,10,0.75), rgba(10,10,10,0.9));
+}
+
+.warm-hero::before {
+  background:
+    linear-gradient(180deg, rgba(20,10,5,0.55), rgba(10,5,0,0.9)),
+    radial-gradient(ellipse at center, rgba(255,140,60,0.25), transparent 70%);
+}
+.warm-hero .hero-badge { color: #ffb347; }
+.warm-hero h1 span { color: #ff9d4d; }
