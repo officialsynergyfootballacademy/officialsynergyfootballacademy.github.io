@@ -25,3 +25,42 @@ if (galleryToggle && galleryPanel) {
     galleryPanel.classList.toggle('open');
   });
 }
+const galleryGrid = document.getElementById('galleryGrid');
+if (galleryGrid) {
+  const images = Array.from(galleryGrid.querySelectorAll('img'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('lightboxClose');
+  const prevBtn = document.getElementById('lightboxPrev');
+  const nextBtn = document.getElementById('lightboxNext');
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = images[currentIndex].src;
+    lightbox.classList.add('open');
+  }
+  function showNext() {
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+  }
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+  }
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => openLightbox(index));
+  });
+  closeBtn.addEventListener('click', () => lightbox.classList.remove('open'));
+  nextBtn.addEventListener('click', showNext);
+  prevBtn.addEventListener('click', showPrev);
+
+  let touchStartX = 0;
+  lightbox.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+  lightbox.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    if (touchEndX < touchStartX - 50) showNext();
+    if (touchEndX > touchStartX + 50) showPrev();
+  });
+}
