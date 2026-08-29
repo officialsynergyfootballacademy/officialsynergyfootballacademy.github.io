@@ -64,3 +64,15 @@ if (galleryGrid) {
     if (touchEndX > touchStartX + 50) showPrev();
   });
 }
+const memoriesTrack = document.getElementById('memoriesTrack');
+const memoriesPrev = document.getElementById('memoriesPrev');
+const memoriesNext = document.getElementById('memoriesNext');
+
+if (memoriesTrack && memoriesPrev && memoriesNext) {
+  memoriesNext.addEventListener('click', () => {
+    memoriesTrack.scrollBy({ left: memoriesTrack.clientWidth * 0.85, behavior: 'smooth' });
+  });
+  memoriesPrev.addEventListener('click', () => {
+    memoriesTrack.scrollBy({ left: -memoriesTrack.clientWidth * 0.85, behavior: 'smooth' });
+  });
+}
