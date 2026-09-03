@@ -840,3 +840,18 @@ body {
   text-decoration: none;
 }
 .btn-outline-dark:hover { background: var(--navy); color: #fff; }
+.testimonial-player {
+  text-align: center;
+}
+.testimonial-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 18px;
+  display: block;
+  border: 3px solid var(--gold);
+}
+.testimonial-player .testimonial-quote {
+  text-align: left;
+}
