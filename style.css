@@ -855,3 +855,6 @@ body {
 .testimonial-player .testimonial-quote {
   text-align: left;
 }
+.testimonials-page .hero-photos img {
+  filter: blur(3px);
+}
