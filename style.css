@@ -1101,3 +1101,86 @@ body {
   text-decoration: none;
   font-size: 1rem;
 }
+.article-hero { position: relative; }
+.article-hero-image { height: 320px; overflow: hidden; }
+.article-hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.article-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.95) 100%);
+}
+.article-hero .container {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 28px 20px;
+  z-index: 2;
+}
+.article-hero h1 {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  line-height: 1.25;
+  margin: 14px 0 10px;
+}
+.article-hero h1 span { color: #4d7cff; }
+.article-meta { color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+
+.article-body { background: #fff; padding: 50px 20px 70px; }
+.article-container { max-width: 700px; margin: 0 auto; }
+
+.article-lede {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+.article-body p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2a2a2a;
+  margin-bottom: 22px;
+}
+.article-body h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--navy);
+  font-size: 1.5rem;
+  margin: 40px 0 16px;
+  border-left: 4px solid var(--crimson);
+  padding-left: 14px;
+}
+.article-body h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--crimson);
+  font-size: 1.15rem;
+  margin: 28px 0 10px;
+}
+.article-body blockquote {
+  margin: 32px 0;
+  padding: 24px 28px;
+  background: #f4f6fb;
+  border-left: 4px solid var(--gold);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--navy);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.article-closing {
+  font-style: italic;
+  color: #444;
+}
+.article-closing-bold {
+  font-weight: 800;
+  color: var(--crimson);
+  font-size: 1.2rem;
+  font-style: normal;
+}
+
+@media (min-width: 768px) {
+  .article-hero-image { height: 420px; }
+  .article-hero h1 { font-size: 2.4rem; }
+}
