@@ -1010,3 +1010,94 @@ body {
 @media (min-width: 768px) {
   .players-cta-content h2 { font-size: 2.8rem; }
 }
+.news-section {
+  padding: 60px 20px;
+  background: linear-gradient(160deg, #0a0a0a 0%, #0B1F3A 50%, #0a0a0a 100%);
+  position: relative;
+  overflow: hidden;
+}
+.news-section::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 60%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(77,124,255,0.15), transparent 70%);
+  z-index: 0;
+}
+.news-section .container { position: relative; z-index: 1; }
+.news-section .section-label { text-align: center; display: block; color: var(--gold); }
+.news-heading {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 36px;
+}
+
+.news-card-v2 {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+
+.news-card-v2-image { height: 380px; overflow: hidden; }
+.news-card-v2-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-card-v2-content {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 24px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0.9) 100%);
+}
+
+.news-tag-v2 {
+  display: inline-block;
+  background: var(--crimson);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.news-card-v2-content h3 {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.news-card-v2-desc {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.news-card-v2-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding-top: 16px;
+}
+.news-date-v2 { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+.news-go {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+}
